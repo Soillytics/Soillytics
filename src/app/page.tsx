@@ -7,6 +7,7 @@ import SectionThree from "./component/sectionThree/page";
 import SectionFour from "./component/sectionFour/page";
 import SectionFive from "./component/sectionFive/page";
 import SectionSix from "./component/sectionSix/page";
+import Stats from "./component/statsection/page";
 
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         <SectionThree />
         <SectionFive />
         <SectionSix />
+        <Stats />
       </div>
     </>
   );

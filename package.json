@@ -9,12 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@deck.gl/extensions": "^9.1.11",
+    "@deck.gl/layers": "^9.1.11",
+    "@deck.gl/react": "^9.1.11",
+    "@types/mapbox-gl": "^3.4.1",
+    "@types/react-map-gl": "^6.1.7",
     "bootstrap": "^5.3.5",
+    "deck.gl": "^9.1.11",
+    "gl-matrix": "^3.4.3",
     "gsap": "^3.12.7",
+    "mapbox-gl": "^3.11.1",
     "next": "15.3.1",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-map-gl": "^8.0.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
