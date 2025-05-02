@@ -1,0 +1,48 @@
+.section_one_wrapper {
+    max-width: 1440px;
+
+    .text_wrapper {
+        background-color: #F7F9FA;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+
+        .box_para {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+    }
+
+    .image_wrapper {
+      padding: 0;
+        .section_img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .infoButton {
+      margin-top: 1rem;
+        a {
+          padding: 0.5rem 1.4rem;
+          border: 1px solid #000;
+          border-radius: 999px;
+          font-size: 1.2rem;
+          font-weight: 600;
+          text-decoration: none;
+          color: #000;
+          transition: all 0.3s ease;
+      
+          &:hover {
+            background-color: #000;
+            color: #fff;
+          }
+        }
+      
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+      
+}

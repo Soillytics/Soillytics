@@ -1,0 +1,47 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url('../../../../public/Hero_img.jpg'); // your static background
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); // overlay for contrast
+    z-index: -1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1, p {
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2.5rem;
+    font-weight: 100;
+  }
+
+  .btn {
+    font-weight: 600;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}

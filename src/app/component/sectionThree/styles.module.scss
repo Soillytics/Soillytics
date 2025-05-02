@@ -1,0 +1,39 @@
+.section_three_wrapper {
+    background-color: #F7F9FA;
+
+
+    .inner_wrapper {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+        .section_title {
+            text-align: center;
+        }
+        .service_cards_wrapper {
+            display: flex;
+            gap: 1rem;
+            .card_body {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                width: 100%;
+         
+                .icon {
+                    width: 50px;
+                    margin-top: 1rem;
+                }  
+                .card_details {
+                    padding-left: 0;
+                    padding-right: 0;
+                } 
+            }
+
+            @media (max-width: 991.98px) { 
+                flex-direction: column;
+             }
+        }
+    }
+}

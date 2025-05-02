@@ -1,0 +1,13 @@
+@import './variables';
+@import './homepage';
+
+@font-face {
+    font-family: 'PingFangTC';
+    src: url("./assets/fonts/PingFang-TC/PingFangTC.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  * {
+    font-family: "PingFangTC","PingFangSC";
+  }
