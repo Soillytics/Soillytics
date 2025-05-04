@@ -1,0 +1,18 @@
+.newsWrapper {
+    background-color: #F7F9FA;
+
+    .news_title {
+        text-align: center;
+    }
+
+    .news_card_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+
+        .card_img {
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+}
