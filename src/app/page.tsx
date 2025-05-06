@@ -8,7 +8,7 @@ import SectionFour from "./component/sectionFour/page";
 import SectionFive from "./component/sectionFive/page";
 import SectionSix from "./component/sectionSix/page";
 import NewsSection from "./component/NewsSection/page";
-
+import FAQAccordion from "./component/FAQAccordion/page";
 
 
 export default function Home() {
@@ -27,6 +27,7 @@ export default function Home() {
         <SectionFive />
         <SectionSix />
         <NewsSection />
+        <FAQAccordion />
       </div>
     </>
   );

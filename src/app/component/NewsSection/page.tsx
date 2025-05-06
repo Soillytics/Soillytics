@@ -20,7 +20,7 @@ const NewsSection = () => {
     return <p className={`text-center`}>Loading latest updates...</p>;
 
   return (
-    <div className={`container-fluid py-3 ${styles.newsWrapper}`}>
+    <div className={`container-fluid pt-1 py-5 ${styles.newsWrapper}`}>
       <h3 className={`my-5 ${styles.news_title}`}>Latest News and Insights</h3>
       <div className={`container`}>
         <div className={styles.news_card_wrapper}>
