@@ -21,205 +21,202 @@
     background: rgba(255, 255, 255, 0.6);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
   }
-}
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: 600;
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-}
-
-.navLinks {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-
-  li {
-    position: relative;
-
-    a,
-    span {
-      font-weight: 500;
-      font-size: 1rem;
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
-      transition: color 0.2s ease;
-
-      &:hover {
-        color: #111;
-      }
-
-      &::after {
-        content: "";
-        display: block;
-        width: 0;
-        height: 2px;
-        background: #000;
-        transition: width 0.3s ease;
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-      }
-
-      &:hover::after {
-        width: 100%;
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
-
-.dropdown {
-  span {
-    position: relative;
-    display: inline-block;
-
-    &::after {
-      content: " ▼";
-      font-size: 0.6rem;
-    }
-  }
-
-  &:hover .dropdownMenu {
-    display: flex;
-  }
-}
-
-.dropdownMenu {
-  display: none;
-  position: absolute;
-  top: 2.5rem;
-  left: 0;
-  background-color: #fff;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
-  padding: 1rem;
-  flex-direction: column;
-  min-width: 240px;
-  z-index: 999;
-
-  li {
-    padding: 0.4rem 0;
-    list-style: none;
-
-    a {
-      color: #333;
-      font-size: 0.95rem;
-      font-weight: 500;
-      text-decoration: none;
-
-      &:hover {
-        color: #000;
-      }
-    }
-  }
-}
-
-.loginButton {
-  margin-left: 1rem;
-
-  a {
-    padding: 0.5rem 1.4rem;
-    border: 1px solid #000;
-    border-radius: 999px;
-    font-size: 0.9rem;
+  .logo {
+    font-size: 1.8rem;
     font-weight: 600;
-    text-decoration: none;
-    color: #000;
-    transition: all 0.3s ease;
-
-    &:hover {
-      background-color: #000;
-      color: #fff;
+  
+    a {
+      text-decoration: none;
+      color: inherit;
     }
   }
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
-
-// 🔥 Hamburger Icon + X Animation
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  cursor: pointer;
-  width: 30px;
-  height: 25px;
-  z-index: 1001;
-
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #000;
-    border-radius: 2px;
-    transition: all 0.4s ease;
-    transform-origin: center;
-  }
-
-  &.open {
-    .bar:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .bar:nth-child(2) {
-      opacity: 0;
-    }
-
-    .bar:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
-  }
-
-  @media (max-width: 768px) {
-    display: flex;
-  }
-}
-
-// 📱 Mobile Menu Dropdown (GSAP-animated container)
-.mobileMenu {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  z-index: 999;
-  padding: 2rem 1.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    margin: 0;
-    padding: 0;
+  
+  .navLinks {
     list-style: none;
-
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 0 !important;
+  
     li {
-      a {
-        font-size: 1.1rem;
-        color: #111;
+      position: relative;
+      list-style: none;
+      margin-top: 0.5rem;
+  
+      a,
+      span {
         font-weight: 500;
+        font-size: 1rem;
+        color: #000;
         text-decoration: none;
-
+        cursor: pointer;
+        transition: color 0.2s ease;
+  
         &:hover {
-          color: #000;
+          color: #111;
+        }
+  
+        &::after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 2px;
+          background: #000;
+          transition: width 0.3s ease;
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+        }
+  
+        &:hover::after {
+          width: 100%;
         }
       }
     }
+  
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
+  
+  .dropdown {
+    span {
+      position: relative;
+      display: inline-block;
+  
+      &::after {
+        content: " ▼";
+        font-size: 0.6rem;
+      }
+    }
+  
+    &:hover .dropdownMenu {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  .dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 1rem;
+    transition: opacity 0.3s ease;
+  
+    li {
+      padding: 0.5rem 1rem;
+      white-space: nowrap;
+    }
+  
+    &.active {
+      display: block;
+    }
+  }
+  
+  
+  .loginButton {
+    margin-left: 1rem;
+  
+    a {
+      padding: 0.5rem 1.4rem;
+      border: 1px solid #000;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #000;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  
+  // 🔥 Hamburger Icon + X Animation
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    z-index: 1001;
+  
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #000;
+      border-radius: 2px;
+      transition: all 0.4s ease;
+      transform-origin: center;
+    }
+  
+    &.open {
+      .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+  
+      .bar:nth-child(2) {
+        opacity: 0;
+      }
+  
+      .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+    }
+  
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  }
+  
+  // 📱 Mobile Menu Dropdown (GSAP-animated container)
+  .mobileMenu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 999;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  
+      li {
+        a {
+          font-size: 1.1rem;
+          color: #111;
+          font-weight: 500;
+          text-decoration: none;
+  
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+    }
+  }  
 }
+

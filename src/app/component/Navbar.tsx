@@ -6,8 +6,10 @@ import gsap from "gsap";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropDown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef(null);
+  const navRef = useRef<HTMLDivElement | null>(null);
 
 
   useEffect(() => {
@@ -28,8 +30,24 @@ export default function Navbar() {
     }
   }, [isMobileMenuOpen]);
 
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setActiveDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const toggleDropdown = (menu: string) => {
+    setActiveDropdown((prev)=>(prev === menu ? null : menu));
+  }
+
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
+    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`} ref={navRef}>
       <div className={styles.logo}>
         <Link href="/">Soillytics</Link>
       </div>
@@ -44,9 +62,16 @@ export default function Navbar() {
       </div>
 
       <ul className={styles.navLinks}>
-        <li className={styles.dropdown}>
-          <span>Platform</span>
-          <ul className={styles.dropdownMenu}>
+      <li
+          className={styles.dropdown}
+          onMouseEnter={() => setActiveDropdown("platform")}
+          onMouseLeave={() => setActiveDropdown(null)}
+        >
+          <span onClick={() => toggleDropdown("platform")}>Platform</span>
+          <ul className={`${styles.dropdownMenu} ${activeDropDown ==="platform" ? styles.active: ''}`}>
+            <li>
+              <Link href="/platform/overview">Overview</Link>
+            </li>
             <li>
               <Link href="/platform/hardware">Hardware and Sensors</Link>
             </li>
@@ -73,10 +98,16 @@ export default function Navbar() {
             </li>
           </ul>
         </li>
-
+        <li>
+          <Link href="/news">News</Link>
+        </li>
+        <li>
+          <Link href="/resources">Resources</Link>
+        </li>
         <li className={styles.dropdown}>
-          <span>About Us</span>
-          <ul className={styles.dropdownMenu}>
+          <span onClick={() => toggleDropdown("about")}>About Us</span>
+          <ul className={`${styles.dropdownMenu}  ${activeDropDown === "about" ? styles.active : ""
+            }`}>
             <li>
               <Link href="/about/company">Company</Link>
             </li>
@@ -84,13 +115,6 @@ export default function Navbar() {
               <Link href="/about/sustainability">Sustainability</Link>
             </li>
           </ul>
-        </li>
-
-        <li>
-          <Link href="/news">News</Link>
-        </li>
-        <li>
-          <Link href="/resources">Resources</Link>
         </li>
         <li>
           <Link href="/contact">Contact Us</Link>

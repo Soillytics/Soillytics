@@ -7,7 +7,7 @@ import { faqs } from "../../../../const";
 
 const FAQAccordion: React.FC = () => {
   return (
-    <div className={`container-fluid ${styles.faqWrapper}`}>
+    <div className={`container-fluid py-5 ${styles.faqWrapper}`}>
       <h2 className={'mb-4 text-center'}>Frequently Asked Questions</h2>
       <div className={`container`}>
         <Accordion defaultActiveKey="0">

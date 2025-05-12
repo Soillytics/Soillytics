@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
           {/* Social Media Column */}
           <div className={styles.column}>
             <h4>Follow Us</h4>
-            <div className={styles.socialIcons}>
+            {/* <div className={styles.socialIcons}>
               <a href="https://linkedin.com" aria-label="LinkedIn">
                 <img src="./Icon/mdi_linkedin.png" alt="LinkedIn" />
               </a>
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
               <a href="https://facebook.com" aria-label="Facebook">
                 <img src="./Icon/ic_baseline-facebook.png" alt="Facebook" />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* Bottom Bar */}

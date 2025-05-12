@@ -82,7 +82,7 @@ export const faqs: FAQItem[] = [
     <li><b>ET-Series</b> Evapotranspiration Sensors – Monitor actual ET, canopy growth, and crop-level water stress.</li>
     <li><b>WS-Series Weather Stations + RG-Series Rain Gauges</b> Hyperlocal, in-field weather monitoring at scale.</li>
     <li><b>TD-Series Telemetry Hubs</b> -  Cloud-connected gateways with built-in cellular for effortless data flow from field to platform.</li>
-    <li><b>Coming 2025/26: Real-time In-Field Nitrate Sensors<b>– Taking nutrient monitoring to the next level.</li>
+    <li><b>Coming 2025/26:</b> Real-time In-Field Nitrate Sensors – Taking nutrient monitoring to the next level.</li>
     </ul>
     `,
   },

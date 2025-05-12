@@ -15,7 +15,6 @@ import Footer from "./component/Footer/page";
 export default function Home() {
   return (
     <>
-      <Navbar />
       <div className={`container-fluid ${styles.main_page}`}>
         <Hero />
         <div className={`text-center ${styles.section_divider_wrapper}`}>
@@ -29,7 +28,6 @@ export default function Home() {
         <SectionSix />
         <NewsSection />
         <FAQAccordion />
-        <Footer />
       </div>
     </>
   );
