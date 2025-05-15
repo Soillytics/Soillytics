@@ -32,29 +32,40 @@
         bottom: 0;
         background: rgba(0, 0, 0, 0.4);
     }
+
 }
 
 .detail_section_wrapper {
     justify-content: center;
     align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+
     .text_side {
 
         .text_side_list {
             list-style: none;
             padding-left: 0;
             margin-top: 3rem;
+
             .list_item {
                 margin-bottom: 1rem;
             }
         }
     }
 
-    
-        .image_side {
-            .fact_img {
-                height: 500px;
-                width: 100%;
-                object-fit: cover;
-            }
+    .section_row {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image_side {
+        .fact_img {
+            height: 500px;
+            width: 100%;
+            object-fit: cover;
         }
+    }
 }
+

@@ -91,3 +91,26 @@ export const faqs: FAQItem[] = [
     answer: `<p>Check out the "CropX Platform Overview" to understand all of the features and capabilities.</p>`
   }
 ];
+
+
+export const icon = [
+  {
+    image: './overview_Icon/carbon_crop-growth.png',
+    text: 'Crop information'
+  }, {
+    image: './overview_Icon/cbi_soil-moisture.png',
+    text: 'Soil information'
+  }, {
+    image: './overview_Icon/tabler_growth.png',
+    text: 'Crop growth'
+  }, {
+    image: './overview_Icon/mdi_weather-windy.png',
+    text: 'Weather'
+  }, {
+    image: '/overview_Icon/hugeicons_satellite-03.png',
+    text: 'Vegetation Health Indices'
+  }, {
+    image: './overview_Icon/soil-moisture-sensor.png',
+    text: 'Soil sensor Data'
+  },
+]
