@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import style from "./styles.module.scss";
 import Link from "next/link";
-import { Button } from "bootstrap";
+import { Agronomics, FarmData, icon, Tracking } from "../../../../const";
 
 const page = () => {
   return (
@@ -125,24 +125,170 @@ const page = () => {
         </div>
       </section>
 
-      <section className={`container-fluid py-5 ${style.platform_section_wrapper}`}>
-        <h3 className={`text-center  ${style.platform_title}`}>Soillytics Platform</h3>
+      <section
+        className={`container-fluid py-5 ${style.platform_section_wrapper}`}
+      >
+        <h3 className={`text-center mb-5  ${style.platform_title}`}>
+          Soillytics Platform
+        </h3>
         <div className={`container`}>
-          <div className={`row`}>
-            <div className={`Col-lg-6 col-md-12`}>
-              <h3 className={`${style.text_side_title}`}>Field Data Management</h3>
-              <p className={`${style.text_side_para}`}>Live insights for tracking and improving crop productivity.</p>
+          <div className={`row g-5 ${style.section_row}`}>
+            <div className={`col-lg-4 col-md-12`}>
+              <h3 className={`${style.text_side_title}`}>
+                Field Data Management
+              </h3>
+              <p className={`${style.text_side_para}`}>
+                Live insights for tracking and improving crop productivity.
+              </p>
               <Link href={`/`}>
-                <button className={`btn btn-primary ${style.learn_more_btn}`}>Learn More</button>
+                <button className={`btn btn-primary ${style.learn_more_btn}`}>
+                  Learn More
+                </button>
               </Link>
             </div>
-            <div className={`Col-lg-6 col-md-12`}>
+            <div className={`col-lg-8 col-md-12`}>
               <div className={`${style.icon_tray}`}>
-                
+                {icon.map((item) => (
+                  <div className={`p-4 ${style.icon_card}`} key={item.id}>
+                    <img
+                      src={item.image}
+                      alt={"icon"}
+                      className={`img ${style.card_icon}`}
+                    />
+                    <p className={`${style.card_text}`}>{item.text}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
+      </section>
+
+      <section
+        className={`container-fluid py-5 ${style.platform_section_wrapper}`}
+      >
+        <div className={`container`}>
+          <div className={`row g-5 ${style.section_row}`}>
+            <div className={`col-lg-8 col-md-12`}>
+              <div className={`${style.icon_tray}`}>
+                {Agronomics.map((item) => (
+                  <div className={`p-4 ${style.icon_card}`} key={item.id}>
+                    <img
+                      src={item.image}
+                      alt={"icon"}
+                      className={`img ${style.card_icon}`}
+                    />
+                    <p className={`${style.card_text}`}>{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className={`col-lg-4 col-md-12`}>
+              <h3 className={`${style.text_side_title}`}>
+                Agronomic Planning Tools
+              </h3>
+              <p className={`${style.text_side_para}`}>
+                Insights and advice for irrigation, disease, 
+                nutrition and effluent management activities.
+              </p>
+              <Link href={`/`}>
+                <button className={`btn btn-primary ${style.learn_more_btn}`}>
+                  Learn More
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className={`container-fluid py-5 ${style.platform_section_wrapper}`}
+      >
+        <div className={`container`}>
+          <div className={`row g-5 ${style.section_row}`}>
+                        <div className={`col-lg-4 col-md-12`}>
+              <h3 className={`${style.text_side_title}`}>
+                Farm Data Connectivity
+              </h3>
+              <p className={`${style.text_side_para}`}>
+                Easily import data from farm machinery, weather stations, rain gauges and more.
+              </p>
+              <Link href={`/`}>
+                <button className={`btn btn-primary ${style.learn_more_btn}`}>
+                  Learn More
+                </button>
+              </Link>
+            </div>
+            <div className={`col-lg-8 col-md-12`}>
+              <div className={`${style.icon_tray}`}>
+                {FarmData.map((item) => (
+                  <div className={`p-4 ${style.icon_card}`} key={item.id}>
+                    <img
+                      src={item.image}
+                      alt={"icon"}
+                      className={`img ${style.card_icon}`}
+                    />
+                    <p className={`${style.card_text}`}>{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className={`container-fluid py-5 ${style.platform_section_wrapper}`}
+      >
+        <div className={`container`}>
+          <div className={`row g-5 ${style.section_row}`}>
+            <div className={`col-lg-8 col-md-12`}>
+              <div className={`${style.icon_tray}`}>
+                {Agronomics.map((item) => (
+                  <div className={`p-4 ${style.icon_card}`} key={item.id}>
+                    <img
+                      src={item.image}
+                      alt={"icon"}
+                      className={`img ${style.card_icon}`}
+                    />
+                    <p className={`${style.card_text}`}>{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className={`col-lg-4 col-md-12`}>
+              <h3 className={`${style.text_side_title}`}>
+                Tracking and Reporting
+              </h3>
+              <p className={`${style.text_side_para}`}>
+                Track and report on crop data, leaching events, effluent applications and more.
+              </p>
+              <Link href={`/`}>
+                <button className={`btn btn-primary ${style.learn_more_btn}`}>
+                  Learn More
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={`container-fluid py-5 ${style.banner_section_wrapper}`}>
+        <h3 className={`banner_title text-center`}>On-Farm Benefits and Average User Result</h3>
+          <div className={`container`}>
+           <div className={`${style.icon_tray}`}>
+                {FarmData.map((item) => (
+                  <div className={`p-4 ${style.icon_card}`} key={item.id}>
+                    <img
+                      src={item.image}
+                      alt={"icon"}
+                      className={`img ${style.card_icon}`}
+                    />
+                    <p className={`${style.card_text}`}>{item.text}</p>
+                  </div>
+                ))}
+              </div>
+          </div>
       </section>
     </>
   );

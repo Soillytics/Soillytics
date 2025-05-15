@@ -69,3 +69,40 @@
     }
 }
 
+.platform_section_wrapper {
+    background-color: #f7f9fa;
+
+    .learn_more_btn {
+        font-weight: 600;
+        border-radius: 999px;
+        cursor: pointer;
+        border: none;
+        padding-top: 0.8rem;
+        padding-bottom: 1rem;
+        width: 150px;
+        background-color: #000000;
+    }
+
+    .section_row {
+        align-items: center;
+    }
+
+    .icon_tray {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+
+        .icon_card {
+            background-color: #fff;
+        }
+
+        .card_icon {
+            width: 50px;
+        }
+    }
+}
+
+.banner_section_wrapper {
+    background-color: #000000;
+    color: #fff;
+}

@@ -95,22 +95,122 @@ export const faqs: FAQItem[] = [
 
 export const icon = [
   {
-    image: './overview_Icon/carbon_crop-growth.png',
+    id:1,
+    image: '/overview_Icon/carbon_crop-growth.png',
     text: 'Crop information'
   }, {
-    image: './overview_Icon/cbi_soil-moisture.png',
+    id:2,
+    image: '/overview_Icon/cbi_soil-moisture.png',
     text: 'Soil information'
   }, {
-    image: './overview_Icon/tabler_growth.png',
+    id:3,
+    image: '/overview_Icon/tabler_growth.png',
     text: 'Crop growth'
   }, {
-    image: './overview_Icon/mdi_weather-windy.png',
+    id:4,
+    image: '/overview_Icon/mdi_weather-windy.png',
     text: 'Weather'
   }, {
+    id:5,
     image: '/overview_Icon/hugeicons_satellite-03.png',
     text: 'Vegetation Health Indices'
   }, {
-    image: './overview_Icon/soil-moisture-sensor.png',
+    id:6,
+    image: '/overview_Icon/soil-moisture-sensor.png',
     text: 'Soil sensor Data'
   },
 ]
+
+export const Agronomics = [
+  {
+    id:1,
+    image: '/overview_Icon/cbi_garden-irrigation.png',
+    text: 'Irrigation Planning'
+  }, {
+    id:2,
+    image: '/overview_Icon/carbon_pest.png',
+    text: 'Disease control'
+  }, {
+    id:3,
+    image: '/overview_Icon/tabler_growth.png',
+    text: 'Nutrition monitoring'
+  } , {
+    id:4,
+    image: '/overview_Icon/material-symbols_water.png',
+    text: 'Effluent irrigation'
+  }
+]
+
+export const Farm = [
+  {
+    id:1,
+    image: '/overview_Icon/cbi_garden-irrigation.png',
+    text: 'Weather stations'
+  }, {
+    id:2,
+    image: '/overview_Icon/carbon_pest.png',
+    text: 'Machine Data'
+  }, {
+    id:3,
+    image: '/overview_Icon/tabler_growth.png',
+    text: 'Third-Party Sensors'
+  } , {
+    id:4,
+    image: '/overview_Icon/material-symbols_water.png',
+    text: 'EPartner Connections'
+  }, {
+    id:5,
+    image: '/overview_Icon/material-symbols_water.png',
+    text: 'Partner Connections'
+  }
+]
+
+export const FarmData = [
+  {
+    id:1,
+    image: '/overview_Icon/cbi_garden-irrigation.png',
+    text: 'Weather stations'
+  }, {
+    id:2,
+    image: '/overview_Icon/carbon_pest.png',
+    text: 'Machine Data'
+  }, {
+    id:3,
+    image: '/overview_Icon/tabler_growth.png',
+    text: 'Third-Party Sensors'
+  } , {
+    id:4,
+    image: '/overview_Icon/material-symbols_water.png',
+    text: 'Irrigation Equipment'
+  }, {
+    id:5,
+    image: '/overview_Icon/material-symbols_water.png',
+    text: 'Partner Connections'
+  }
+]
+
+
+export const Tracking = [
+  {
+    id:1,
+    image: '/overview_Icon/cbi_garden-irrigation.png',
+    text: 'Environmental Events'
+  }, {
+    id:2,
+    image: '/overview_Icon/carbon_pest.png',
+    text: 'Resource use Efficiency'
+  }, {
+    id:3,
+    image: '/overview_Icon/tabler_growth.png',
+    text: 'Data sharing'
+  } , {
+    id:4,
+    image: '/overview_Icon/material-symbols_water.png',
+    text: 'Crop Performance'
+  }, {
+    id:5,
+    image: '/overview_Icon/material-symbols_water.png',
+    text: 'Seasonal Retrospect'
+  }
+]
+

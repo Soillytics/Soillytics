@@ -9,8 +9,6 @@ import SectionFive from "./component/sectionFive/page";
 import SectionSix from "./component/sectionSix/page";
 import NewsSection from "./component/NewsSection/page";
 import FAQAccordion from "./component/FAQAccordion/page";
-import Footer from "./component/Footer/page";
-
 
 export default function Home() {
   return (
